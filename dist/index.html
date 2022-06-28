@@ -1,0 +1,203 @@
+<html>
+
+    <head>
+        
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="CSS/Main.css">
+        
+        <title>
+          QTOO product selector
+        </title>
+
+    </head>
+
+    <body>
+        
+        <!-- container for layered images that will populate according to user product selections, src attribute gets populated according to user selections -->
+        <div class="bomcontainer">
+            <img id="baseitem" class="itemimage" src="" style="z-index:1; position: relative;">
+            <img id="item1" class="itemimage" src="" style="z-index:2; position: relative;">
+            <img id="item2" class="itemimage" src="" style="z-index:3; position: relative;">
+            <img id="item3" class="itemimage" src="" style="z-index:4; position: relative;">
+            <img id="item4" class="itemimage" src="" style="z-index:5; position: relative;">
+            <img id="item5" class="itemimage" src="" style="z-index:6; position: relative;">
+            <img id="item6" class="itemimage" src="" style="z-index:7; position: relative;">
+            <img id="item7" class="itemimage" src="" style="z-index:8; position: relative;">
+            <img id="item8" class="itemimage" src="" style="z-index:9; position: relative;">
+            <img id="item9" class="itemimage" src="" style="z-index:10; position: relative;">
+            <img id="item10" class="itemimage" src="" style="z-index:11; position: relative;">
+            <img id="item11" class="itemimage" src="" style="z-index:12; position: relative;">
+            <img id="item12" class="itemimage" src="" style="z-index:13; position: relative;">
+        </div>
+
+        <!-- container for the initial slideshow images and the layout image that appears when user hovers over selection, src gets populated according to what is being hovered over -->
+        <div id="container">
+            <div id="fadingImage" class="image-styled"></div>
+            <img id="layout" src="">
+        </div>
+
+        <!-- section for left slide-out menu -->
+        <section class="sidebar-navigation">
+            <nav id="menu">
+
+                <!-- initial menu title -->
+                <div class="title2">Start here</div>
+
+                <!-- top level menu -->
+                <ul class="level-1" style="list-style: none;">
+
+                    <!-- top level menu items, bom-id refers to which bom to use when selected, data-image which photo to use when hovered over, bomimage which image to use as 'src' for 
+                    'baseitem' (ln.18) when selected -->
+                    <li><a href="#" bom-id="BOM1" class="abom" data-image="https://dline.com/media/mu5i4wpc/qt3100-250sm.jpg" bomimage="SVG/baseitems/QT3100" itemnumber="QT3100" quantity=" x 1 " amount="5" base="Built in part for mixer and spout" parentID="" childPosition="">Built in tap set</a>
+
+                        <!-- Selection boxes for BOM1 layout -->
+                        <ul class="level-2" style="list-style: none;">
+                            <li class="back"><a href="#">Back</a></li>
+                            <p>
+                                <span>Taps</span>
+                                <!-- parentID is the itemcount number of select on which this product's placement depends -->>
+                                <select id="taps" itemcount="1" class="selects" parentID="" bom-id="BOM1">
+                                    <option value="0" imagesrc ="blank" quantity="" id="taps" itemcount="1" itemnumber="" childPosition=""></option>                                  
+                                    <option value="1" imagesrc ="QA3080M" quantity=" x 1 " id="taps" itemcount="1" itemnumber="QA3080M" childPosition="" >Spout, 115mm projection, satin finish</option>
+                                    <option value="2" imagesrc ="QA3080P" quantity=" x 1 " id="taps" itemcount="1" itemnumber="QA3080P" childPosition="" >Spout, 115mm projection, polished</option>
+                                    <option value="3" imagesrc ="QA3080B" quantity=" x 1 " id="taps" itemcount="1" itemnumber="QA3080B" childPosition="" >Spout, 115mm projection, black</option>
+                                    <option value="4" imagesrc ="QA3180B" quantity=" x 1 " id="taps" itemcount="1" itemnumber="QA3180B" childPosition="" >Spout, 190mm projection, black</option>
+                                    <option value="5" imagesrc ="QA3180M" quantity=" x 1 " id="taps" itemcount="1" itemnumber="QA3180M" childPosition="" >Spout, 190mm projection, satin finish</option>
+                                    <option value="6" imagesrc ="QA3180MP2" quantity=" x 1 " id="taps" itemcount="1" itemnumber="QA3180MP2" childPosition="" >Spout, 190mm projection, satin copper</option>
+                                    <option value="7" imagesrc ="QA3180MP3" quantity=" x 1 " id="taps" itemcount="1" itemnumber="QA3180MP3" childPosition="" >Spout, 190mm projection, satin brass</option>
+                                    <option value="8" imagesrc ="QA3180MP4" quantity=" x 1 " id="taps" itemcount="1" itemnumber="QA3180MP4" childPosition="" >Spout, 190mm projection, satin charcoal</option>
+                                    <option value="9" imagesrc ="QA3180P" quantity=" x 1 " id="taps" itemcount="1" itemnumber="QA3180P" childPosition="" >Spout, 190mm projection, polished</option>
+                                    <option value="10" imagesrc ="QA3180PP2" quantity=" x 1 " id="taps" itemcount="1" itemnumber="QA3180PP2" childPosition="" >Spout, 190mm projection, polished copper</option>
+                                    <option value="11" imagesrc ="QA3180PP3" quantity=" x 1 " id="taps" itemcount="1" itemnumber="QA3180PP3" childPosition="" >Spout, 190mm projection, polished brass</option>
+                                    <option value="12" imagesrc ="QA3180PP4" quantity=" x 1 " id="taps" itemcount="1" itemnumber="QA3180PP4" childPosition="" >Spout, 190mm projection, polished charcoal</option>
+                                    <option value="13" imagesrc ="QA3280B" quantity=" x 1 " id="taps" itemcount="1" itemnumber="QA3280B" childPosition="" >Spout, 250mm projection, black</option>
+                                    <option value="14" imagesrc ="QA3280M" quantity=" x 1 " id="taps" itemcount="1" itemnumber="QA3280M" childPosition="" >Spout, 250mm projection, satin finish</option>
+                                    <option value="15" imagesrc ="QA3280MP2" quantity=" x 1 " id="taps" itemcount="1" itemnumber="QA3280MP2" childPosition="" >Spout, 250mm projection, satin copper</option>
+                                    <option value="16" imagesrc ="QA3280MP3" quantity=" x 1 " id="taps" itemcount="1" itemnumber="QA3280MP3" childPosition="" >Spout, 250mm projection, satin brass</option>
+                                    <option value="17" imagesrc ="QA3280MP4" quantity=" x 1 " id="taps" itemcount="1" itemnumber="QA3280MP4" childPosition="" >Spout, 250mm projection, satin charcoal</option>
+                                    <option value="18" imagesrc ="QA3280P" quantity=" x 1 " id="taps" itemcount="1" itemnumber="QA3280P" childPosition="" >Spout, 250mm projection, polished</option>
+                                    <option value="19" imagesrc ="QA3280PP2" quantity=" x 1 " id="taps" itemcount="1" itemnumber="QA3280PP2" childPosition="" >Spout, 250mm projection, polished copper</option>
+                                    <option value="20" imagesrc ="QA3280PP3" quantity=" x 1 " id="taps" itemcount="1" itemnumber="QA3280PP3" childPosition="" >Spout, 250mm projection, polished brass</option>
+                                    <option value="21" imagesrc ="QA3280PP4" quantity=" x 1 " id="taps" itemcount="1" itemnumber="QA3280PP4" childPosition="" >Spout, 250mm projection, polished charcoal</option>
+                                </select>
+                            </p>
+                            <p>
+                                <span>Trim</span>
+                                <select id="trims" itemcount="2" class="selects" bom-id="BOM1" parentID="">
+                                    <option value="0" imagesrc ="blank" quantity="" id="trims" itemcount="2" itemnumber="" childPosition=""></option>
+                                    <option value="1" imagesrc ="QA2180B" quantity=" x 1 " id="trims" itemcount="2" itemnumber="QA2180B" childPosition="">Control f/wall mounted mixer, black</option>
+                                    <option value="2" imagesrc ="QA2180M" quantity=" x 1 " id="trims" itemcount="2" itemnumber="QA2180M" childPosition="">Control f/wall mounted mixer, satin finish</option>
+                                    <option value="3" imagesrc ="QA2180MP2" quantity=" x 1 " id="trims" itemcount="2" itemnumber="QA2180MP2" childPosition="">Control f/wall mounted mixer, satin copper</option>
+                                    <option value="4" imagesrc ="QA2180MP3" quantity=" x 1 " id="trims" itemcount="2" itemnumber="QA2180MP3" childPosition="">Control f/wall mounted mixer, satin brass</option>
+                                    <option value="5" imagesrc ="QA2180MP4" quantity=" x 1 " id="trims" itemcount="2" itemnumber="QA2180MP4" childPosition="">Control f/wall mounted mixer, satin charcoal</option>
+                                    <option value="6" imagesrc ="QA2180P" quantity=" x 1 " id="trims" itemcount="2" itemnumber="QA2180P" childPosition="">Control f/wall mounted mixer, polished</option>
+                                    <option value="7" imagesrc ="QA2180PP2" quantity=" x 1 " id="trims" itemcount="2" itemnumber="QA2180PP2" childPosition="">Control f/wall mounted mixer, polished copper</option>
+                                    <option value="8" imagesrc ="QA2180PP3" quantity=" x 1 " id="trims" itemcount="2" itemnumber="QA2180PP3" childPosition="">Control f/wall mounted mixer, polished brass</option>
+                                    <option value="9" imagesrc ="QA2180PP4" quantity=" x 1 " id="trims" itemcount="2" itemnumber="QA2180PP4" childPosition="">Control f/wall mounted mixer, polished charcoal</option>
+                                </select>
+                            </p>
+                            <p>
+                                <span>Waste push-open</span>
+                                <select id="wastes" itemcount="3" class="selects" bom-id="BOM1" parentID="">
+                                    <option value="0" imagesrc ="" quantity="" id="wastes" itemcount="3" itemnumber="" childPosition=""></option>
+                                    <option value="1" imagesrc ="QA1100M" quantity=" x 1 " id="wastes" itemcount="3" itemnumber="QA1100M" childPosition="">Waste push-open, matt chrome finish</option>
+                                    <option value="2" imagesrc ="QA1100P" quantity=" x 1 " id="wastes" itemcount="3" itemnumber="QA1100P" childPosition="">Waste push-open, chrome finish</option>
+                                    <option value="3" imagesrc ="QA1150M" quantity=" x 1 " id="wastes" itemcount="3" itemnumber="QA1150M" childPosition="">Integral waste push-open, satin finish</option>
+                                    <option value="4" imagesrc ="QA1150MP2" quantity=" x 1 " id="wastes" itemcount="3" itemnumber="QA1150MP2" childPosition="">Integral waste push-open, PVD copper</option>
+                                    <option value="5" imagesrc ="QA1150MP3" quantity=" x 1 " id="wastes" itemcount="3" itemnumber="QA1150MP3" childPosition="">Integral waste push-open, PVD brass</option>
+                                    <option value="6" imagesrc ="QA1150MP4" quantity=" x 1 " id="wastes" itemcount="3" itemnumber="QA1150MP4" childPosition="">Integral waste push-open, PVD charcoal</option>
+                                    <option value="7" imagesrc ="QA1150P" quantity=" x 1 " id="wastes" itemcount="3" itemnumber="QA1150P" childPosition="">Integral waste push-open, polished</option>
+                                    <option value="8" imagesrc ="QA1150PP2" quantity=" x 1 " id="wastes" itemcount="3" itemnumber="QA1150PP2" childPosition="">Integral waste push-open, polished PVD copper</option>
+                                    <option value="9" imagesrc ="QA1150PP3" quantity=" x 1 " id="wastes" itemcount="3" itemnumber="QA1150PP3" childPosition="">Integral waste push-open, polished PVD brass</option>
+                                    <option value="10" imagesrc ="QA1150PP4" quantity=" x 1 " id="wastes" itemcount="3" itemnumber="QA1150PP4" childPosition="">Integral waste push-open, polished PVD charcoal</option>
+                                    <option value="11" imagesrc ="QA1250M" quantity=" x 1 " id="wastes" itemcount="3" itemnumber="QA1250M" childPosition="">Integral waste fixed-open, satin finish</option>
+                                    <option value="12" imagesrc ="QA1250MP2" quantity=" x 1 " id="wastes" itemcount="3" itemnumber="QA1250MP2" childPosition="">Integral waste fixed-open, PVD copper</option>
+                                    <option value="13" imagesrc ="QA1250MP3" quantity=" x 1 " id="wastes" itemcount="3" itemnumber="QA1250MP3" childPosition="">Integral waste fixed-open, PVD brass</option>
+                                    <option value="14" imagesrc ="QA1250MP4" quantity=" x 1 " id="wastes" itemcount="3" itemnumber="QA1250MP4" childPosition="">Integral waste fixed-open, PVD charcoal</option>
+                                    <option value="15" imagesrc ="QA1250P" quantity=" x 1 " id="wastes" itemcount="3" itemnumber="QA1250P" childPosition="">Integral waste fixed-open, polished</option>
+                                    <option value="16" imagesrc ="QA1250PP2" quantity=" x 1 " id="wastes" itemcount="3" itemnumber="QA1250PP2" childPosition="">Integral waste fixed-open, polished PVD copper</option>
+                                    <option value="17" imagesrc ="QA1250PP3" quantity=" x 1 " id="wastes" itemcount="3" itemnumber="QA1250PP3" childPosition="">Integral waste fixed-open, polished PVD brass</option>
+                                    <option value="18" imagesrc ="QA1250PP4" quantity=" x 1 " id="wastes" itemcount="3" itemnumber="QA1250PP4" childPosition="">Integral waste fixed-open, polished PVD charcoal</option>
+                                </select>
+                            </p>
+                            <p>
+                                <span>Siphon</span>
+                                <select id="siphons" itemcount="4" class="selects" bom-id="BOM1" parentID="">
+                                    <option value="0" imagesrc ="blank.svg" quantity="" id="siphons" itemcount="4" itemnumber=""></option>
+                                    <option value="1" imagesrc ="QA1400B" quantity=" x 1 " id="siphons" itemcount="4" itemnumber="QA1400B" childPosition="">Siphon, black</option>
+                                    <option value="2" imagesrc ="QA1400M" quantity=" x 1 " id="siphons" itemcount="4" itemnumber="QA1400M" childPosition="">Siphon, matt chrome finish</option>
+                                    <option value="3" imagesrc ="QA1400P" quantity=" x 1 " id="siphons" itemcount="4" itemnumber="QA1400P" childPosition="">Siphon, chrome finish</option>
+                                </select>
+                            </p>
+                        </ul>
+                    </li>
+                    
+                    <!-- top level menu items, bom-id refers to which bom to use when selected, data-image which photo to use when hovered over, bomimage which image to use as 'src' for 
+                    'baseitem' (ln.18) when selected -->
+                    <li class="abom"><a href="#" bom-id="BOM2" data-image="https://dline.com/media/ndqlnmno/qs3300-340wmp4.jpg" bomimage="SVG/baseitems/QS3300" itemnumber="QS3300" quantity=" x 1 " amount="3" base="Built in thermostat" parentID="" childPosition="">Built in thermostat with hand-held and main shower</a>
+
+                        <!-- Selection boxes for BOM1 layout -->
+                        <ul class="level-2" style="list-style: none;">
+                            <li class="back"><a href="#">Back</a></li>
+                            <p>
+                                <span>Shower arm</span>
+                                <select id="trims" itemcount="1" class="selects" parentID="" bom-id="BOM2">
+                                    <option value="0" imagesrc ="blank" quantity=" x 1 " id="arms" itemcount="1" itemnumber="" childPosition=""></option>
+                                    <option value="1" imagesrc ="QS5209M" quantity=" x 1 " id="arms" itemcount="1" itemnumber="QS5209M" childPosition="C100">Ceiling shower arm, 100mm, brushed</option>
+                                    <option value="2" imagesrc ="QS5209P" quantity=" x 1 " id="arms" itemcount="1" itemnumber="QS5209P" childPosition="C100">Ceiling shower arm, 100mm, blank</option>
+                                    <option value="3" imagesrc ="QS5219M" quantity=" x 1 " id="arms" itemcount="1" itemnumber="QS5219M" childPosition="C200">Ceiling shower arm, 200mm, brushed</option>
+                                    <option value="4" imagesrc ="QS5219P" quantity=" x 1 " id="arms" itemcount="1" itemnumber="QS5219P" childPosition="C200">Ceiling shower arm, 200mm, blank</option>
+                                    <option value="5" imagesrc ="QS5229M" quantity=" x 1 " id="arms" itemcount="1" itemnumber="QS5229M" childPosition="C300">Ceiling shower arm, 300mm, brushed</option>
+                                    <option value="6" imagesrc ="QS5229P" quantity=" x 1 " id="arms" itemcount="1" itemnumber="QS5229P" childPosition="C300">Ceiling shower arm, 300mm, blank</option>
+                                    <option value="7" imagesrc ="QS5239M" quantity=" x 1 " id="arms" itemcount="1" itemnumber="QS5239M" childPosition="C400">Ceiling shower arm, 400mm, brushed</option>
+                                    <option value="8" imagesrc ="QS5239P" quantity=" x 1 " id="arms" itemcount="1" itemnumber="QS5239P" childPosition="C400">Ceiling shower arm, 400mm, blank</option>
+                                    <option value="9" imagesrc ="QS5279M" quantity=" x 1 " id="arms" itemcount="1" itemnumber="QS5279M" childPosition="W300">Wall shower arm, 300mm, brushed</option>
+                                    <option value="10" imagesrc ="QS5279P" quantity=" x 1 " id="arms" itemcount="1" itemnumber="QS5279P" childPosition="W300">Wall shower arm, 300mm, blank</option>
+                                    <option value="11" imagesrc ="QS5289M" quantity=" x 1 " id="arms" itemcount="1" itemnumber="QS5289M" childPosition="W400">Wall shower arm, 400mm, brushed</option>
+                                    <option value="12" imagesrc ="QS5289P" quantity=" x 1 " id="arms" itemcount="1" itemnumber="QS5289P" childPosition="W400">Wall shower arm, 400mm, blank</option>
+                                </select>
+                            </p>
+                            <p>
+                                <select id="outlet" itemcount="2" class="selects" parentID="1" bom-id="BOM2" hidden>                             
+                                    <option value="0" imagesrc ="QS3400" quantity=" x 2 " id="outlet" itemcount="2" itemnumber="QS3400"></option>
+                                </select>
+                            </p>
+                        </ul>                        
+                    </li>
+
+                </ul>
+            </nav>
+        </section>
+
+        <!-- BOMs corresponding to different layouts -->
+        <section class="BOM" id="BOM1">
+
+                <div id = "test1">Built in tap assembly</div>
+                <div class="items" id = "BOM1taps"></div>
+                <div class="items" id = "BOM1trims"></div>
+                <div class="items" id = "BOM1wastes"></div>
+                <div class="items" id = "BOM1siphons"></div>
+
+        </section> 
+
+          <section class="BOM" id="BOM2">
+                <div id = "test2">Built int thermostat with hand-held and main showers</div>
+                <div class="items" id = "BOM2arms"></div>
+                <div class="items" id = "BOM2outlet"></div>
+        </section>
+
+        <a><button id="exporter" class="back2">Export</button></a>
+
+        <section class="main">
+            <h1>QTOO product selector</h1>
+        </section>
+
+    </body>
+
+    <script src="JS/jquery-1.10.2.min.js"></script>
+    <script src="JS/JQUERY%20Main.js"></script>
+    <script src="JS/slideshow.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js"></script>
+
+
+</html>
